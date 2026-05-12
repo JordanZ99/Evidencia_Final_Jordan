@@ -10,9 +10,9 @@ export default function Comments() {
         <Giscus
           id="comments"
           repo="JordanZ99/Evidencia_Final_Jordan"
-          repoId="R_kgDOMP_xxx" // Placeholder
+          repoId="R_kgDOSa0pew"
           category="General"
-          categoryId="DIC_kwDOMP_xxx" // Placeholder
+          categoryId="DIC_kwDOSa0pe84C8052"
           mapping="pathname"
           term="Welcome to my blog!"
           reactionsEnabled="1"
