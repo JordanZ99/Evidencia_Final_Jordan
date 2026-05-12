@@ -1,4 +1,4 @@
-import { Scale, Globe, MessageSquare, Heart, Sprout } from "lucide-react"
+import { Scale, Globe, MessageSquare, Heart, Sprout, Users } from "lucide-react"
 
 export const blogPosts = [
   {
@@ -124,6 +124,19 @@ export const blogPosts = [
     `
   },
   {
+    slug: "convivencia-exclusion-etica",
+    title: "13.2 Convivencia y Exclusión",
+    date: "10 Mayo, 2026",
+    category: "Ética en la Tecnología",
+    icon: Users,
+    summary: "La exclusión se manifiesta de cuatro formas según Volf, y la tecnología es un espacio donde esto se replica.",
+    content: `
+      <p>La convivencia y la exclusión representan un desafío ético constante en la sociedad actual. Todo lo que hacemos y decimos genera un impacto en los demás, ya sean personas cercanas o desconocidas, lo que nos obliga a mantener una vigilancia ética permanente. El autor Volf describe que la exclusión se manifiesta principalmente de cuatro formas que son la eliminación, la asimilación, la dominación y el abandono. Estas dinámicas fueron observadas en conflictos históricos donde las diferencias étnicas y religiosas fracturaron naciones enteras. La eliminación busca borrar al otro mediante la aniquilación o la expulsión. La asimilación intenta forzar al diferente a ser igual al grupo dominante, anulando su identidad original. La dominación utiliza el poder político y económico para mantener a ciertos grupos en desventaja sistemática. Finalmente, el abandono es la marginación mediante el olvido y la privación de recursos esenciales. Frente a esto, la ética propone el diálogo y el reconocimiento de la dignidad ajena como las únicas herramientas capaces de construir una paz duradera basada en el entendimiento mutuo.</p>
+<br>
+      <p>He seleccionado este subtema porque en mi formación como ingeniero de software entiendo que la tecnología es un espacio donde estas exclusiones se replican si no actuamos con consciencia. Un ejemplo de eliminación digital es el borrado arbitrario de cuentas o comunidades enteras que piensan diferente. La asimilación se ve cuando diseñamos sistemas que solo aceptan un idioma o una forma de interactuar, ignorando la diversidad cultural de los usuarios. La dominación ocurre cuando los algoritmos de decisión financiera o laboral benefician solo a ciertos sectores privilegiados. El abandono se refleja claramente en la brecha digital, donde dejamos sin acceso a herramientas modernas a comunidades con pocos recursos o infraestructura limitada. Como futuro profesional, mi objetivo es aplicar estos conceptos diseñando plataformas inclusivas que garanticen la accesibilidad para todos los usuarios sin importar sus condiciones. Aplico esto mediante la implementación de interfaces adaptativas y el desarrollo de software de código abierto que no condicione al usuario a estándares de poder específicos. Elegí este tema porque considero que un buen desarrollador no solo escribe código eficiente, sino que también construye puentes digitales que evitan la marginación social.</p>
+    `
+  },
+  {
     slug: "empatia-escucha-legal",
     title: "14.1 Empatía y Escucha",
     date: "10 Mayo, 2026",
@@ -153,37 +166,6 @@ export const blogPosts = [
 
       <p>Qué es la empatía según la Doctora Brené Brown<p>
 
-    `
-  },
-  {
-    slug: "etica-planetaria-responsabilidad",
-    title: "15.1 Ética Planetaria",
-    date: "10 Mayo, 2026",
-    category: "Futuro y Sostenibilidad",
-    icon: Sprout,
-    summary: "La Tierra es un barco en peligro (analogía del Iceberg). Responsabilidad ambiental.",
-    content: `
-      <p>Finalmente para el último post de este blog, quise elegir el tema de la ética planetaria porque me parece que es lo que protege a todos los temas anteriores. He aprendido que no sirve de nada tener leyes perfectas o una ética de diálogo increíble si no tenemos un lugar sano donde vivir. elegí este subtema de Leonardo Boff porque nos obliga a levantar la mirada de nuestros libros y códigos para ver lo que está pasando con nuestra casa común, la tierra.</p>
-<br>
-      <p>Boff, que es un pensador brasileño super importante y ayudó a redactar la carta de la tierra, nos plantea algo muy serio: ya no estamos solo en una crisis económica o política, estamos en una crisis de supervivencia. él usa una imagen muy fuerte en su libro, comparando nuestra situación con un iceberg o con el arca de noé. básicamente nos dice que en este siglo todas las cosas malas que veníamos haciendo se hicieron más grandes: el maltrato a la naturaleza por ganar dinero rápido, la destrucción de bosques y el abandono de los agricultores.</p>
-<br>
-      <p>Lo que más me resuena de su discurso es que él antes se enfocaba mucho en defender a los pobres y oprimidos, pero ahora se dio cuenta de que la naturaleza es la nueva "oprimida". Para Boff, defender la vida sobre la tierra es defender la dignidad de la gente, porque si el ecosistema colapsa, los primeros en sufrir siempre son los más vulnerables. Es un sistema globalizado que, en lugar de ayudarnos a progresar, está soltando fuerzas destructivas que amenazan la vida misma.</p>
-<br>
-      <p>Extendiéndome un poco en lo que esto significa para nosotros, la ética planetaria nos pide pasar de una mentalidad de dueños a una de cuidadores. ya no se trata de ver cuánto podemos sacar de la tierra, sino de cómo podemos convivir con ella. esto conecta perfecto con el derecho ambiental y con la idea de que la naturaleza debería tener derechos propios para ser defendida ante los tribunales.</p>
-<br>
-      <p>Decidí cerrar con este tema porque creo que mi generación tiene la responsabilidad de integrar esta conciencia planetaria en todo lo que hagamos. Ya sea que estemos redactando un contrato, trabajando en una empresa o participando en nuestra comunidad, siempre debemos preguntarnos si nuestras acciones ayudan a que la vida en el planeta siga siendo posible.</p>
-<br>
-      <p>Espero que estos posts les ayuden a ver que la ética y la ciudadanía no son solo materias que hay que pasar, sino formas de vivir que nos ayudan a ser profesionales más humanos y conscientes de nuestro impacto en el mundo. Muchas gracias!</p>
-
-      <div class="relative w-full aspect-video my-8 rounded-xl overflow-hidden shadow-xl border border-border">
-        <iframe
-          class="absolute inset-0 w-full h-full"
-          src="https://www.youtube.com/embed/TavrTbIib9I"
-          title="Ética Planetaria"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
     `
   }
 ]
