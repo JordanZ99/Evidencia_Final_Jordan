@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const EMOJIS = ["👍", "💡", "🚀", "🤔", "👏"];
@@ -8,6 +8,17 @@ const EMOJIS = ["👍", "💡", "🚀", "🤔", "👏"];
 export default function ParagraphReaction({ children }: { children: React.ReactNode }) {
   const [isHovered, setIsHovered] = useState(false);
   const [reactions, setReactions] = useState<Record<string, number>>({});
+  const leaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = () => {
+    if (leaveTimer.current) clearTimeout(leaveTimer.current);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Delay hiding so the user has time to move to the emoji bar
+    leaveTimer.current = setTimeout(() => setIsHovered(false), 300);
+  };
 
   const handleReact = (emoji: string) => {
     setReactions((prev) => ({
@@ -17,10 +28,10 @@ export default function ParagraphReaction({ children }: { children: React.ReactN
   };
 
   return (
-    <div 
+    <div
       className="relative group my-4"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="prose-p:mb-0 inline-block w-full">
         {children}
@@ -31,9 +42,11 @@ export default function ParagraphReaction({ children }: { children: React.ReactN
         {isHovered && (
           <motion.div
             initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: -15 }}
+            animate={{ opacity: 1, y: -12 }}
             exit={{ opacity: 0, y: 5 }}
-            className="absolute top-0 right-0 bg-slate-800 border border-slate-700 rounded-full px-2 py-1 shadow-lg flex gap-1 z-10"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="absolute top-0 right-0 bg-slate-800 border border-slate-700 rounded-full px-2 py-1 shadow-lg flex gap-1 z-20"
           >
             {EMOJIS.map((emoji) => (
               <button
@@ -52,9 +65,11 @@ export default function ParagraphReaction({ children }: { children: React.ReactN
       {Object.entries(reactions).length > 0 && (
         <div className="flex gap-2 mt-2 flex-wrap">
           {Object.entries(reactions).map(([emoji, count]) => (
-            <span 
-              key={emoji} 
-              className="inline-flex items-center gap-1 bg-cyan/10 border border-cyan/30 text-cyan px-2 py-0.5 rounded-full text-xs font-bold"
+            <span
+              key={emoji}
+              className="inline-flex items-center gap-1 bg-cyan/10 border border-cyan/30 text-cyan px-2 py-0.5 rounded-full text-xs font-bold cursor-pointer hover:bg-cyan/20 transition-colors"
+              onClick={() => handleReact(emoji)}
+              title="Haz clic para añadir tu reacción"
             >
               {emoji} {count}
             </span>
