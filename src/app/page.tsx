@@ -71,7 +71,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-border/20"
+              className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
             >
               <Image
                 src="/etica.png"
