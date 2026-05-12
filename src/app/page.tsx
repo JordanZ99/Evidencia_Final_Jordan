@@ -66,18 +66,20 @@ export default function Home() {
                 En el ámbito laboral, la ética es el pilar de la confianza. Actuar con integridad no solo mejora el ambiente de trabajo, sino que asegura que nuestras acciones profesionales contribuyan positivamente al bienestar de la sociedad y al éxito sostenible.
               </p>
             </motion.div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-8 bg-slate-900 rounded-2xl shadow-xl border border-border mt-8">
-                <Lightbulb className="h-8 w-8 text-cyan mb-4" />
-                <h4 className="font-bold mb-2">Vida Cotidiana</h4>
-                <p className="text-xs text-muted">Tomar decisiones conscientes basadas en el respeto y la convivencia armónica.</p>
-              </div>
-              <div className="p-8 bg-slate-900 rounded-2xl shadow-xl border border-border mt-8">
-                <Scale className="h-8 w-8 text-cyan mb-4" />
-                <h4 className="font-bold mb-2">Entorno Laboral</h4>
-                <p className="text-xs text-muted">Actuar con integridad profesional y responsabilidad hacia el impacto social.</p>
-              </div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-border/20"
+            >
+              <Image
+                src="/etica.png"
+                alt="Importancia de la Ética"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
