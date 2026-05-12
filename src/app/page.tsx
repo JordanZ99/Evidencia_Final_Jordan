@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[#020617]">
           <Prism
             animationType="rotate"
@@ -41,9 +41,9 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ética Profesional y Ciudadana<br></br><span className="text-salmon">Evidencia 3</span>
             </h1>
-            <p className="text-xl text-azure/80 mb-8">
+            {/*<p className="text-xl text-azure/80 mb-8">
               Hecho por: Jordan Zahid Pacheco Estrada.
-            </p>
+            </p>*/}
           </motion.div>
         </div>
       </section>
@@ -140,7 +140,7 @@ export default function Home() {
               >
                 {/* Glow Effect */}
                 <div className="absolute w-56 h-48 bg-white/20 blur-[50px] -left-1/2 -top-1/2 group-hover:bg-cyan/20 transition-all duration-500"></div>
-                
+
                 {/* Card Content Wrapper */}
                 <div className="absolute inset-0.5 bg-[#323132] rounded-xl z-[1] p-6 flex flex-col justify-between">
                   <div>
