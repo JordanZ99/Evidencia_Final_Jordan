@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Conceptos Clave Section */}
-      <section id="conceptos" className="py-24 bg-[#010409]">
+      <section id="conceptos" className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate">Conceptos <span className="text-cyan">Clave</span></h2>
           <p className="text-muted max-w-2xl mx-auto">
@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* Blog Section (Directly here) */}
-      <section className="py-24 bg-slate text-white">
+      <section id="subtemas" className="py-24 bg-[#546075ff]" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-4xl font-bold mb-4 text-center md:text-left">5 subtemas que considero <span className="text-cyan">esenciales</span></h2>
@@ -136,29 +136,37 @@ export default function Home() {
                 key={post.slug}
                 whileHover={{ y: -5 }}
                 onClick={() => setSelectedPost(post)}
-                className="bg-slate-900 p-6 rounded-xl border border-border/10 hover:shadow-2xl transition-all cursor-pointer group"
+                className="relative drop-shadow-xl overflow-hidden rounded-xl bg-[#3d3c3d] cursor-pointer group h-full min-h-[300px]"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 bg-accent rounded-lg text-cyan group-hover:scale-110 transition-transform">
-                    <post.icon className="h-6 w-6" />
+                {/* Glow Effect */}
+                <div className="absolute w-56 h-48 bg-white/20 blur-[50px] -left-1/2 -top-1/2 group-hover:bg-cyan/20 transition-all duration-500"></div>
+                
+                {/* Card Content Wrapper */}
+                <div className="absolute inset-0.5 bg-[#323132] rounded-xl z-[1] p-6 flex flex-col justify-between">
+                  <div>
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="p-3 bg-accent rounded-lg text-cyan group-hover:scale-110 transition-transform">
+                        <post.icon className="h-6 w-6" />
+                      </div>
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-muted">{post.date}</span>
+                    </div>
+
+                    <p className="text-xs font-bold text-cyan mb-2 uppercase tracking-tight">{post.category}</p>
+                    <h3 className="text-xl font-bold mb-3 leading-tight group-hover:text-cyan transition-colors text-slate">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-muted mb-6 line-clamp-3">
+                      {post.summary}
+                    </p>
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-muted">{post.date}</span>
+
+                  <span className="inline-flex items-center text-sm font-bold text-slate group-hover:text-cyan transition-colors mt-auto">
+                    Leer artículo completo
+                    <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
                 </div>
-
-                <p className="text-xs font-bold text-cyan mb-2 uppercase tracking-tight">{post.category}</p>
-                <h3 className="text-xl font-bold mb-3 leading-tight group-hover:text-cyan transition-colors text-slate">
-                  {post.title}
-                </h3>
-                <p className="text-sm text-muted mb-6 line-clamp-3">
-                  {post.summary}
-                </p>
-
-                <span className="inline-flex items-center text-sm font-bold text-slate group-hover:text-cyan transition-colors">
-                  Leer artículo completo
-                  <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
               </motion.div>
             ))}
           </div>
