@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { blogPosts } from "@/lib/data"
-import { Scale, Heart, Shield, Globe, X, Calendar, Tag, Zap, User, Lightbulb } from "lucide-react"
+import { Scale, Heart, Shield, Search, Leaf, Globe, X, Calendar, Tag, Zap, User, Lightbulb } from "lucide-react"
 import parse, { domToReact, Element as DOMElement } from "html-react-parser"
 import ParagraphReaction from "@/components/ParagraphReaction"
 import Comments from "@/components/Comments"
@@ -39,7 +39,7 @@ export default function Home() {
             className="max-w-2xl"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ética Profesional y Ciudadana<br></br><span className="text-salmon">Evidencia 3</span>
+              Ética Profesional y Ciudadanía<br></br><span className="text-salmon">Evidencia 3</span>
             </h1>
             {/*<p className="text-xl text-azure/80 mb-8">
               Hecho por: Jordan Zahid Pacheco Estrada.
@@ -60,10 +60,10 @@ export default function Home() {
             >
               <h2 className="text-4xl font-bold mb-6 text-slate">La <span className="text-cyan">Ética</span> y su importancia en la vida cotidiana y laboral</h2>
               <p className="text-lg text-muted mb-6">
-                La ética es mucho más que un conjunto de reglas teóricas; es el compás que guía nuestras decisiones diarias. En la vida cotidiana, nos ayuda a convivir con respeto y empatía, construyendo comunidades más fuertes y justas.
+                La ética es usada por cada uno de nosotros en nuestra vida cotidiana, ya que cualquier cosa que hagamos afecta a los demás por lo que debemos decidir cada día si lo que hacemos está bien o mal.
               </p>
               <p className="text-lg text-muted">
-                En el ámbito laboral, la ética es el pilar de la confianza. Actuar con integridad no solo mejora el ambiente de trabajo, sino que asegura que nuestras acciones profesionales contribuyan positivamente al bienestar de la sociedad y al éxito sostenible.
+                La ética en el ambito laboral varía mucho según la empresa y el área de trabajo, por ejemplo, en un hospital la ética es fundamental para tomar decisiones que afectan la vida de los pacientes, mientras que en una empresa de tecnología la ética puede centrarse en la privacidad de los datos de los usuarios.
               </p>
             </motion.div>
             <motion.div
@@ -71,7 +71,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl"
+              className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden"
             >
               <Image
                 src="/etica.png"
@@ -87,28 +87,31 @@ export default function Home() {
       {/* Conceptos Clave Section */}
       <section id="conceptos" className="py-24 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-slate">Conceptos <span className="text-cyan">Clave</span></h2>
-          <p className="text-muted max-w-2xl mx-auto">
-            Palabras clave en los 5 subtemas que elegí.
-          </p>
+          <h2 className="text-4xl font-bold mb-4 text-slate">La ética en mi <span className="text-cyan">Carrera</span></h2>
+
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
-              title: "Dignidad Humana",
+              title: "Transparencia de datos",
+              icon: Search,
+              desc: "Se aplica al ser honestos sobre qué información recolecta el software y para qué fines específicos se utiliza sin engañar al público."
+            },
+            {
+              title: "Impacto socioambiental",
+              icon: Leaf,
+              desc: "Es la responsabilidad de crear software eficiente que no desperdicie recursos de hardware ni energía contribuyendo al bienestar del planeta."
+            },
+            {
+              title: "Accesibilidad e inclusión",
               icon: User,
-              desc: "Es el valor de cada persona por el simple hecho de serlo, sin importar su nacionalidad o condición."
+              desc: "Consiste en programar interfaces que todos puedan usar eliminando las barreras digitales que excluyan a cualquier persona"
             },
             {
-              title: "Interdependencia",
+              title: "Colaboración honesta",
               icon: Globe,
-              desc: "Es el reconocimiento de que nuestras vidas y acciones están conectadas con los demás. Por lo que nos necesitamos mutuamente para alcanzar un bien común."
-            },
-            {
-              title: "Agencia Ciudadana",
-              icon: Zap,
-              desc: "Es la responsabilidad de cada individuo para actuar y generar cambios positivos en su comunidad mediante la empatía y el compromiso con la ética planetaria."
+              desc: "Significa participar en comunidades de código abierto y respetar las licencias ajenas reconociendo el valor del trabajo compartido."
             }
           ].map((item, idx) => (
             <motion.div
@@ -128,8 +131,8 @@ export default function Home() {
       <section id="subtemas" className="py-24 bg-[#546075ff]" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-center md:text-left">5 subtemas que considero <span className="text-cyan">esenciales</span></h2>
-            <p className="text-white/60 text-center md:text-left">Un resumen ejecutivo de los pilares de la ética profesional y ciudadana para mi evidencia.</p>
+            <h2 className="text-4xl font-bold mb-4 text-center md:text-left">Blog del <span className="text-cyan">Módulo 3</span></h2>
+            <p className="text-white/60 text-center md:text-left">5 subtemas que escogí.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -178,8 +181,10 @@ export default function Home() {
       {/* Planetary Ethics Banner (Conclusión) */}
       <section className="py-20 bg-cyan text-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-          <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Tras el análisis de los contenidos del Módulo 3, concluyo que la formación ética no es un complemento a mi carrera, sino una parte fundamental. La relación entre estos cinco temas revela una hoja de ruta para el actuar ciudadano:</h2>
+          <div className="max-w-7xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">La conclusión de estos subtemas nos muestra que la ética y la tecnología deben avanzar en la misma dirección para construir una sociedad funcional en la que empaticemos con nuestros semejantes, respetemos los derechos de todos y trabajemos juntos por un futuro mejor.
+
+            </h2>
           </div>
         </div>
         <div className="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4">
@@ -199,13 +204,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-8 text-slate">Reflexión <span className="text-cyan">Final</span></h2>
             <div className="space-y-6 text-lg text-muted text-left leading-relaxed">
               <p>
-                Esta asignatura ha marcado un punto de inflexión en mi perspectiva profesional. Al comprender que los derechos humanos y la ciudadanía global no son solo marcos legales, sino compromisos éticos diarios, me siento preparada para ejercer con una responsabilidad mucho más profunda.
-              </p>
-              <p>
-                En mi entorno laboral, la práctica de la escucha empática y el diálogo genuino me permitirán no solo resolver conflictos, sino construir puentes de confianza. Entiendo ahora que mi actuar ético contribuye directamente a una cultura organizacional más humana y justa.
-              </p>
-              <p>
-                A nivel personal, la ética planetaria me invita a vivir de forma más consciente. Cada decisión, por pequeña que sea, tiene un impacto en nuestra interdependencia global. Esta asignatura no termina aquí; se convierte en la brújula que guiará mi conducta como ciudadana comprometida con la dignidad humana y el cuidado de nuestra casa común.
+                Como reflexión final de esta evidencia, puedo decir que el analizar de nuevo estos 5 subtemas me ha permitido entender que mi carrera no se limita a escribir líneas de código o gestionar servidores de alto rendimiento. Ser un ingeniero de software implica aceptar una responsabilidad ética que va desde el respeto absoluto a los derechos humanos hasta la creación de puentes de diálogo que combatan la exclusión digital. He aprendido que la tecnología más avanzada pierde su valor si no se construye con empatía y si no se diseña pensando en la interdependencia que nos une como ciudadanos globales. Mi compromiso como profesional es utilizar todas las herramientas técnicas a mi alcance, para asegurar que el progreso tecnológico sea inclusivo, humano y respetuoso con la dignidad de cada persona. Al final del día, el mejor software no es el que tiene la arquitectura más compleja, sino el que logra mejorar la convivencia y el bienestar de la sociedad de manera justa y equitativa.
               </p>
             </div>
           </motion.div>
@@ -217,24 +216,48 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-12 text-slate border-l-4 border-cyan pl-6">Referencias <span className="text-cyan">Bibliográficas</span> (APA)</h2>
 
-          <ul className="space-y-6 text-sm text-muted">
-            <li className="pl-8 -indent-8">
-              Boff, L. (2013). <i>Ética planetaria: Desde el punto de vista de los pobres</i>. [Video]. YouTube. https://www.youtube.com/watch?v=TavrTbIib9I
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 text-xs text-muted">
+            <li className="pl-4 -indent-4">
+              Tribuna Constitucional. (4 de febrero de 2022). <i>La Declaración Universal de Derechos Humanos en un minuto</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=dgfX_6noLnY" className="text-cyan hover:underline break-all">https://www.youtube.com/watch?v=dgfX_6noLnY</a>
             </li>
-            <li className="pl-8 -indent-8">
-              CuriosaMente. (2016). <i>Los Derechos Humanos: ¿De dónde vienen y qué son?</i>. [Video]. YouTube. https://www.youtube.com/watch?v=iSi_w2KslK8
+            <li className="pl-4 -indent-4">
+              Hammarskjöld, N. U. B. (2013, diciembre 30). <i>Documentación de la ONU : Derechos Humanos</i>. Naciones Unidas. <a href="https://research.un.org/es/docs/humanrights/undhr" className="text-cyan hover:underline break-all">https://research.un.org/es/docs/humanrights/undhr</a>
             </li>
-            <li className="pl-8 -indent-8">
-              Naciones Unidas. (1948). <i>Declaración Universal de los Derechos Humanos</i>. Recuperado de https://www.un.org/es/about-us/universal-declaration-of-human-rights
+            <li className="pl-4 -indent-4">
+              UNICEF. (2018). <i>UNICEF presenta análisis sobre la situación de la infancia en México</i>. Recuperado de <a href="https://www.unicef.org/lac/comunicados-prensa/analisis-sobre-la-situacionde-la-infancia-en-mexico" className="text-cyan hover:underline break-all">https://www.unicef.org/lac/comunicados-prensa/...</a>
             </li>
-            <li className="pl-8 -indent-8">
-              RSA. (2013). <i>Brené Brown sobre la empatía</i>. [Video]. YouTube. https://www.youtube.com/watch?v=1Evwgu369Jw
+            <li className="pl-4 -indent-4">
+              Docentes para el Desarrollo. (8 de febrero de 2017). <i>¿Qué es la Ciudadanía global?</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=joD8qfcd79k" className="text-cyan hover:underline break-all">https://www.youtube.com/watch?v=joD8qfcd79k</a>
             </li>
-            <li className="pl-8 -indent-8">
-              UNESCO. (2015). <i>¿Qué es la educación para la ciudadanía mundial?</i>. [Video]. YouTube. https://www.youtube.com/watch?v=toL-U6qf7hg
+            <li className="pl-4 -indent-4">
+              Vega, E. (2015). <i>“La agencia ciudadana”</i>. Recuperado de <a href="https://www.noroeste.com.mx/opinion/malecon-mazatlan/la-agenciaciudadana-GNOP91282" className="text-cyan hover:underline break-all">https://www.noroeste.com.mx/opinion/...</a>
             </li>
-            <li className="pl-8 -indent-8">
-              UNIR. (2016). <i>Ética del Diálogo: Martin Buber y Emmanuel Levinas</i>. [Video]. YouTube. https://www.youtube.com/watch?v=rNLOma4tZ_Y
+            <li className="pl-4 -indent-4">
+              Griselda. (2020, junio 5). <i>Habermas y la ética discursiva</i>. Escuela de Ciencias Jurídicas. <a href="https://escuelacienciasjuridicas.com/etica-discursiva" className="text-cyan hover:underline break-all">https://escuelacienciasjuridicas.com/etica-discursiva</a>
+            </li>
+            <li className="pl-4 -indent-4">
+              Interdependencia. (2021, junio 17). <i>Concepto</i>. <a href="https://concepto.de/interdependencia/" className="text-cyan hover:underline break-all">https://concepto.de/interdependencia/</a>
+            </li>
+            <li className="pl-4 -indent-4">
+              Berrios, O. (2023, octubre 23). <i>La ética de la interdependencia</i>. Plena inclusión. <a href="https://www.plenainclusion.org/noticias/laetica-de-la-interdependencia/" className="text-cyan hover:underline break-all">https://www.plenainclusion.org/noticias/...</a>
+            </li>
+            <li className="pl-4 -indent-4">
+              Chuquinaira-Sama, H., Mallqui, R. I. M., & Condori, L. R. (2025). <i>Exclusión Social y su Relación con la Convivencia Escolar</i>. Revista Tecnológica-Educativa Docentes 2.0, 18(2), 63-74.
+            </li>
+            <li className="pl-4 -indent-4">
+              Goodin, R. E. (1996). <i>Inclusion and exclusion</i>. European Journal of Sociology, 37(2), 343-371.
+            </li>
+            <li className="pl-4 -indent-4">
+              Lola SP. (11 de mayo de 2014). <i>La Brecha Digital ¿Una nueva forma de exclusión social?</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=mD40nKwbi0s" className="text-cyan hover:underline break-all">https://www.youtube.com/watch?v=mD40nKwbi0s</a>
+            </li>
+            <li className="pl-4 -indent-4">
+              Gómez, P. (7 de marzo de 2021). <i>Qué es la empatía</i> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=DMAwzMYjNSg" className="text-cyan hover:underline break-all">https://www.youtube.com/watch?v=DMAwzMYjNSg</a>
+            </li>
+            <li className="pl-4 -indent-4">
+              Porquequieroestarbien.com. (s/f). <i>¿Qué es la empatía y cuál es su importancia?</i> Recuperado de <a href="https://porquequieroestarbien.com/bienestar-emocional/fortalecer-lamente/que-es-la-empatia-y-cual-es-su-importancia" className="text-cyan hover:underline break-all">https://porquequieroestarbien.com/bienestar-emocional/...</a>
+            </li>
+            <li className="pl-4 -indent-4">
+              Gaceta UNAM. (2022, diciembre 8). <i>Empatía, “pegamento social” que permite conectarnos con los demás</i>. <a href="https://www.gaceta.unam.mx/empatiapegamento-social-que-permite-conectarnos-con-los-demas" className="text-cyan hover:underline break-all">https://www.gaceta.unam.mx/empatiapegamento...</a>
             </li>
           </ul>
         </div>
