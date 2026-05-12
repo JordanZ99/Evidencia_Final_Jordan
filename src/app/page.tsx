@@ -8,6 +8,7 @@ import { Scale, Heart, Shield, Globe, X, Calendar, Tag, Zap, User, Lightbulb } f
 import parse, { domToReact, Element as DOMElement } from "html-react-parser"
 import ParagraphReaction from "@/components/ParagraphReaction"
 import Comments from "@/components/Comments"
+import Prism from "@/components/Prism"
 
 export default function Home() {
   const [selectedPost, setSelectedPost] = useState<typeof blogPosts[0] | null>(null)
@@ -16,13 +17,17 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero.jpg"
-            alt="Hero Background"
-            fill
-            className="object-cover brightness-50"
-            priority
+        <div className="absolute inset-0 z-0 bg-[#020617]">
+          <Prism
+            animationType="rotate"
+            timeScale={0.5}
+            height={3.5}
+            baseWidth={5.5}
+            scale={3.6}
+            hueShift={0}
+            colorFrequency={1}
+            noise={0}
+            glow={1}
           />
         </div>
 
