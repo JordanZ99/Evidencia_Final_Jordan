@@ -2,15 +2,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020617; /* Slate 950 */
-  --foreground: #f8fafc; /* Slate 50 */
-  --primary: #3b82f6; /* Blue 500 */
+  --background: #020617;
+  /* Slate 950 */
+  --foreground: #f8fafc;
+  /* Slate 50 */
+  --primary: #3b82f6;
+  /* Blue 500 */
   --primary-foreground: #ffffff;
-  --secondary: #0ea5e9; /* Sky 500 */
+  --secondary: #0ea5e9;
+  /* Sky 500 */
   --secondary-foreground: #ffffff;
-  --accent: #0f172a; /* Slate 900 */
-  --muted: #64748b; /* Slate 500 */
-  --border: #1e293b; /* Slate 800 */
+  --accent: #0f172a;
+  /* Slate 900 */
+  --muted: #64748b;
+  /* Slate 500 */
+  --border: #1e293b;
+  /* Slate 800 */
 }
 
 @theme inline {
@@ -20,8 +27,12 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-muted: var(--muted);
-  --color-cyan: #38bdf8; /* Sky 400 */
-  --color-slate: #e2e8f0; /* Slate 200 (for readable text on dark bg) */
+  --color-azure: #511c8eff;
+  --color-salmon: #ff6767;
+  --color-cyan: #38bdf8;
+  /* Sky 400 */
+  --color-slate: #e2e8f0;
+  /* Slate 200 (for readable text on dark bg) */
   --font-serif: "Space Grotesk", sans-serif;
   --font-sans: "Inter", sans-serif;
 }

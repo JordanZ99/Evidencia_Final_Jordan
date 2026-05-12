@@ -188,7 +188,7 @@ export default function Home() {
           </div>
         </div>
         <div className="absolute right-0 top-0 opacity-10 translate-x-1/4 -translate-y-1/4">
-          <Globe className="h-96 w-96" />
+          <Zap className="h-96 w-96" />
         </div>
       </section>
 
