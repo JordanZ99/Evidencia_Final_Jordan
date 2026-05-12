@@ -22,15 +22,6 @@ export default function Comments() {
           lang="es"
           loading="lazy"
         />
-        <div className="mt-4 p-4 bg-accent/20 border border-cyan/20 rounded-lg text-sm text-slate">
-          <strong>⚠️ Aviso para Jordan:</strong> Para que esta caja de comentarios funcione correctamente, debes:
-          <ol className="list-decimal pl-5 mt-2 space-y-1">
-            <li>Hacer público tu repositorio en GitHub.</li>
-            <li>Habilitar "Discussions" en la configuración del repositorio.</li>
-            <li>Ir a <a href="https://giscus.app/es" target="_blank" rel="noreferrer" className="text-cyan underline">giscus.app</a>, poner tu repo y obtener el <code>repoId</code> y <code>categoryId</code>.</li>
-            <li>Actualizar esos valores en <code>src/components/Comments.tsx</code>.</li>
-          </ol>
-        </div>
       </div>
     </div>
   );
