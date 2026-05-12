@@ -39,9 +39,9 @@ export default function Home() {
             className="max-w-2xl"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ética Profesional y Ciudadana<br></br><span className="text-cyan">Evidencia 3</span>
+              Ética Profesional y Ciudadana<br></br><span className="text-salmon">Evidencia 3</span>
             </h1>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-azure/80 mb-8">
               Hecho por: Jordan Zahid Pacheco Estrada.
             </p>
           </motion.div>
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Conceptos Clave Section */}
-      <section id="conceptos" className="py-24">
+      <section id="conceptos" className="py-24 bg-[#010409]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate">Conceptos <span className="text-cyan">Clave</span></h2>
           <p className="text-muted max-w-2xl mx-auto">
@@ -112,7 +112,7 @@ export default function Home() {
             <motion.div
               key={idx}
               whileHover={{ scale: 1.05 }}
-              className="p-8 bg-accent rounded-2xl text-center border border-transparent hover:border-cyan transition-all"
+              className="p-8 bg-[#0a0f1d] rounded-2xl text-center border border-transparent hover:border-cyan transition-all"
             >
               <item.icon className="h-10 w-10 text-cyan mx-auto mb-6" />
               <h3 className="text-xl font-bold mb-4">{item.title}</h3>
