@@ -330,12 +330,12 @@ export default function Home() {
                   })}
                 </div>
 
-                <Comments />
+                <Comments slug={selectedPost.slug} />
 
-                <div className="mt-12 pt-8 border-t border-border">
+                <div className="mt-12 pt-8 ">
                   <button
                     onClick={() => setSelectedPost(null)}
-                    className="px-8 py-3 bg-slate text-white rounded-xl font-bold hover:scale-105 transition-transform"
+                    className="px-8 py-3 bg-slate text-azure rounded-xl font-bold hover:scale-105 transition-transform"
                   >
                     Cerrar Lectura
                   </button>
